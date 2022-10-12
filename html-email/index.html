@@ -11,11 +11,12 @@
   <style>
     body {
       width: 100% !important;
+      /* для избежения вольности шрифтов */
       -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+      line-height: 100%;
       margin: 0;
       padding: 0;
-      line-height: 100%;
     }
 
     [style*="Arial"] {
@@ -23,71 +24,130 @@
     }
 
     img {
-      outline: none;
-      text-decoration: none;
-      border: none;
-      -ms-interpolation-mode: bicubic;
+      display: block;
       max-width: 100% !important;
+      -ms-interpolation-mode: bicubic;
+      text-decoration: none;
       margin: 0;
       padding: 0;
-      display: block;
+      border: none;
+      outline: none;
     }
 
     table td {
+      /* что бы убрать стандартные бордеры таблиц */
       border-collapse: collapse;
     }
 
     table {
       border-collapse: collapse;
+      /* что бы убрать не нужные отступы */
       mso-table-lspace: 0pt;
       mso-table-rspace: 0pt;
+    }
+
+    @media (max-width: 620px) {
+      .table-600 {
+        width: 280px !important;
+      }
+
+      .table-520 {
+        width: 240px !important;
+      }
+
+      .logo {
+        padding-top: 18px !important;
+        padding-bottom: 18px !important;
+      }
+
+      .logo-img {
+        width: 114px !important;
+        height: 26px !important;
+      }
+
+      .hero-img {
+        width: 280px !important;
+        height: 300px !important;
+      }
+
+      .name-painting {
+        margin-top: 10px !important;
+      }
+
+      .painting {
+        width: 240px !important;
+        height: 84px !important;
+      }
+
+      .mobil-block {
+        display: block !important;
+      }
+
+      .about {
+        margin-bottom: 16px !important;
+      }
+
+      .btn {
+        background-color: #9D5CD0 !important;
+      }
     }
   </style>
 </head>
 
 <body style="margin: 0; padding: 0;">
 
-  <div style="font-size:0px;color:#ffffff;opacity:0;visibility:hidden;width:0;height:0;display:none;">
-    Тестовое письмо
+  <div style="font-size:0px;
+  color:#ffffff;
+  opacity:0;
+  visibility:hidden;
+  width:0;
+  height:0;
+  display:none;">
+    Письмо от Blanchard
   </div>
 
-  <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ededed">
+  <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#e5e5e5">
 
+    <!-- header section -->
     <tr>
-      <td>
-
-        <table align="center" class="table-600" width="600" cellpadding="0" cellspacing="0" bgcolor="#000000;">
+      <td align="center">
+        <table align="center" class="table-600" width="600" cellpadding="0" cellspacing="0" bgcolor="#000000">
           <tr>
-            <td align="center">
-              <table cellpadding="0" cellspacing="0">
-                <tr>
-                  <td align="center" style="padding-top: 30px; padding-bottom: 28px;">
-                    <img src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/logo.png"
-                      width="187" alt="logo">
-                  </td>
-                </tr>
-                <tr>
-                  <td align="center">
-                    <img
-                      src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/hero-img.jpg"
-                      width="600" alt="hero-img">
-                  </td>
-                </tr>
-              </table>
+            <td align="center" class="logo" style="padding-top: 30px; padding-bottom: 28px;">
+              <img src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/logo.png"
+                class="logo-img" width="187" height="42" alt="logo">
             </td>
           </tr>
         </table>
+      </td>
+    </tr>
 
-        <table align="center" width="600" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+    <tr>
+      <td align="center">
+        <table align="center" class="table-600" width="600" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="center">
+              <img src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/hero-img.jpg"
+                class="hero-img" width="600" height="300" alt="hero-img">
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- hero section -->
+    <tr>
+      <td align="center">
+        <table align="center" class="table-600" width="600" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
           <tr>
             <td align="center">
               <table align="center" class="table-520" width="520" cellpadding="0" cellspacing="0">
                 <tr>
                   <td align="center">
                     <h1 style="font-family: Arial, Helvetica, sans-serif;margin-top: 32px;margin-bottom: 13px;
-                    font-size: 20px;
-                    line-height: 24px;
-                    color: #515151;">
+                        font-size: 20px;
+                        line-height: 24px;
+                        color: #515151;">
                       Торжество импрессионизма
                     </h1>
                   </td>
@@ -95,11 +155,20 @@
                 <tr>
                   <td align="left">
                     <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 13px;
-                    font-size: 12px;
-                    line-height: 24px; 
-                    color: #515151;">
+                        font-size: 12px;
+                        line-height: 24px; 
+                        color: #515151;">
                       Опыт говорит нам, что семантический разбор внешних противодействий требует анализа новых принципов
-                      формирования материально-технической и кадровой базы. <br>
+                      формирования материально-технической и кадровой базы.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 13px;
+                        font-size: 12px;
+                        line-height: 24px; 
+                        color: #515151;">
                       Задача организации, в особенности же внедрение современных методик, в своём классическом
                       представлении, допускает внедрение глубокомысленных рассуждений. Есть над чем задуматься: элементы
                       политического процесса преданы социально-демократической анафеме! Но интерактивные прототипы
@@ -112,180 +181,420 @@
             </td>
           </tr>
         </table>
+      </td>
+    </tr>
 
-        <table align="center" width="600" cellpadding="0" cellspacing="0" bgcolor="#000000">
+    <!-- painting section -->
+    <tr>
+      <td>
+        <table align="center" class="table-600" width="600" cellpadding="0" cellspacing="0" bgcolor="#000000">
           <tr>
             <td align="center">
               <table align="center" class="table-520" width="520" cellpadding="0" cellspacing="0">
                 <tr>
                   <td align="center">
                     <h2 style="font-family: Arial, Helvetica, sans-serif;margin-top: 26px;margin-bottom: 21px;
-                    font-size: 16px;
-                    line-height: 24px; 
-                    color: #ffffff;">
+                        font-size: 16px;
+                        line-height: 24px; 
+                        color: #ffffff;">
                       Представленные художники
                     </h2>
                   </td>
                 </tr>
 
-                <table align="center" class="table-520" width="520" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td align="center">
-                      <img
-                        src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/painting-1.jpg"
-                        width="520" height="180" alt="painting-1">
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">
-                      <h3 style="font-family: Arial, Helvetica, sans-serif;margin-top: 21px;margin-bottom: 8px;
-                      font-size: 12px;
-                      line-height: 24px; 
-                      color: #ffffff;">
-                        Поль Гоген
-                      </h3>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="left">
-                      <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 21px;
-                      font-size: 12px;
-                      line-height: 18px; 
-                      color: #ffffff;">
-                        Прежде всего, разбавленное изрядной долей эмпатии, рациональное мышление в значительной степени
-                        обусловливает важность укрепления моральных ценностей.
-                      </p>
-                    </td>
-                  </tr>
-                </table>
+                <tr>
+                  <td align="center">
+                    <img
+                      src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/painting-1.jpg"
+                      width="520" height="180" class="painting" alt="painting-1">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <h3 class="name-painting" style="font-family: Arial, Helvetica, sans-serif;margin-top: 21px;margin-bottom: 8px;
+                          font-size: 12px;
+                          line-height: 24px; 
+                          color: #ffffff;">
+                      Поль Гоген
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 21px;
+                          font-size: 12px;
+                          line-height: 18px; 
+                          color: #ffffff;">
+                      Прежде всего, разбавленное изрядной долей эмпатии, рациональное мышление в значительной степени
+                      обусловливает важность укрепления моральных ценностей.
+                    </p>
+                  </td>
+                </tr>
 
-                <table align="center" class="table-520" width="520" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td align="center">
-                      <img
-                        src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/painting-2.jpg"
-                        width="520" height="180" alt="painting-2">
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">
-                      <h3 style="font-family: Arial, Helvetica, sans-serif;margin-top: 21px;margin-bottom: 8px;
-                      font-size: 12px;
-                      line-height: 24px; 
-                      color: #ffffff;">
-                        Огюст Ренуар
-                      </h3>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="left">
-                      <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 21px;
-                      font-size: 12px;
-                      line-height: 18px; 
-                      color: #ffffff;">
-                        А также сделанные на базе интернет-аналитики выводы освещают чрезвычайно интересные особенности
-                        картины в целом.
-                      </p>
-                    </td>
-                  </tr>
-                </table>
+                <tr>
+                  <td align="center">
+                    <img
+                      src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/painting-2.jpg"
+                      width="520" height="180" class="painting" alt="painting-2">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <h3 class="name-painting" style="font-family: Arial, Helvetica, sans-serif;margin-top: 21px;margin-bottom: 8px;
+                          font-size: 12px;
+                          line-height: 24px; 
+                          color: #ffffff;">
+                      Огюст Ренуар
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 21px;
+                          font-size: 12px;
+                          line-height: 18px; 
+                          color: #ffffff;">
+                      А также сделанные на базе интернет-аналитики выводы освещают чрезвычайно интересные особенности
+                      картины в целом.
+                    </p>
+                  </td>
+                </tr>
 
-                <table align="center" class="table-520" width="520" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td align="center">
-                      <img
-                        src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/painting-3.jpg"
-                        width="520" height="180" alt="painting-3">
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">
-                      <h3 style="font-family: Arial, Helvetica, sans-serif;margin-top: 21px;margin-bottom: 8px;
-                      font-size: 12px;
-                      line-height: 24px; 
-                      color: #ffffff;">
-                        Клод Моне
-                      </h3>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="left">
-                      <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 21px;
-                      font-size: 12px;
-                      line-height: 18px; 
-                      color: #ffffff;">
-                        Современная методология разработки однозначно фиксирует необходимость системы массового участия.
-                      </p>
-                    </td>
-                  </tr>
-                </table>
+                <tr>
+                  <td align="center">
+                    <img
+                      src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/painting-3.jpg"
+                      width="520" height="180" class="painting" alt="painting-3">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <h3 class="name-painting" style="font-family: Arial, Helvetica, sans-serif;margin-top: 21px;margin-bottom: 8px;
+                          font-size: 12px;
+                          line-height: 24px; 
+                          color: #ffffff;">
+                      Клод Моне
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 21px;
+                          font-size: 12px;
+                          line-height: 18px; 
+                          color: #ffffff;">
+                      Современная методология разработки однозначно фиксирует необходимость системы массового участия.
+                    </p>
+                  </td>
+                </tr>
 
-                <table align="center" class="table-520" width="520" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td align="center">
-                      <img
-                        src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/painting-4.jpg"
-                        width="520" height="180" alt="painting-4">
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">
-                      <h3 style="font-family: Arial, Helvetica, sans-serif;margin-top: 21px;margin-bottom: 8px;
-                      font-size: 12px;
-                      line-height: 24px; 
-                      color: #ffffff;">
-                        Эдуард Мане
-                      </h3>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="left">
-                      <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 21px;
-                      font-size: 12px;
-                      line-height: 18px; 
-                      color: #ffffff;">
-                        Но социально-экономическое развитие является качественно новой ступенью вывода текущих активов.
-                      </p>
-                    </td>
-                  </tr>
-                </table>
+                <tr>
+                  <td align="center">
+                    <img
+                      src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/painting-4.jpg"
+                      width="520" height="180" class="painting" alt="painting-4">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <h3 class="name-painting" style="font-family: Arial, Helvetica, sans-serif;margin-top: 21px;margin-bottom: 8px;
+                          font-size: 12px;
+                          line-height: 24px; 
+                          color: #ffffff;">
+                      Эдуард Мане
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 21px;
+                          font-size: 12px;
+                          line-height: 18px; 
+                          color: #ffffff;">
+                      Но социально-экономическое развитие является качественно новой ступенью вывода текущих активов.
+                    </p>
+                  </td>
+                </tr>
 
-                <table align="center" class="table-520" width="520" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td align="center">
-                      <img
-                        src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/painting-5.jpg"
-                        width="520" height="180" alt="painting-5">
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">
-                      <h3 style="font-family: Arial, Helvetica, sans-serif;margin-top: 21px;margin-bottom: 8px;
-                      font-size: 12px;
-                      line-height: 24px; 
-                      color: #ffffff;">
-                        Винсент Ван Гог
-                      </h3>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="left">
-                      <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 21px;
-                      font-size: 12px;
-                      line-height: 18px; 
-                      color: #ffffff;">
-                        Повседневная практика показывает, что разбавленное изрядной долей эмпатии, рациональное мышление
-                        требует анализа поставленных обществом задач.
-                      </p>
-                    </td>
-                  </tr>
-                </table>
-
+                <tr>
+                  <td align="center">
+                    <img
+                      src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/painting-5.jpg"
+                      width="520" height="180" class="painting" alt="painting-5">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <h3 class="name-painting" style="font-family: Arial, Helvetica, sans-serif;margin-top: 21px;margin-bottom: 8px;
+                          font-size: 12px;
+                          line-height: 24px; 
+                          color: #ffffff;">
+                      Винсент Ван Гог
+                    </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 26px;
+                          font-size: 12px;
+                          line-height: 18px; 
+                          color: #ffffff;">
+                      Повседневная практика показывает, что разбавленное изрядной долей эмпатии, рациональное мышление
+                      требует анализа поставленных обществом задач.
+                    </p>
+                  </td>
+                </tr>
               </table>
             </td>
           </tr>
         </table>
+      </td>
+    </tr>
 
+    <!-- about section -->
+    <tr>
+      <td>
+        <table align="center" class="table-600" width="600" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+          <tr>
+            <td align="center">
+              <table align="center" class="table-520" width="520" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="left">
+                    <h3 style="font-family: Arial, Helvetica, sans-serif;margin-top: 13px;margin-bottom: 16 px;
+                        font-size: 16px;
+                        line-height: 24px; 
+                        color: #515151;">
+                      И это ещё не всё!
+                    </h3>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="center">
+                    <table align="left" style="margin-right: 29px;" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td align="left" width="140" class="mobil-block">
+                          <img
+                            src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/check-square.png"
+                            width="36" height="36" alt="check-square">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="left" width="140" class="mobil-block">
+                          <p class="about" style="font-family: Arial, Helvetica, sans-serif;margin-top: 16px;margin-bottom: 0;
+                                font-size: 12px;
+                                line-height: 18px; 
+                                color: #515151;">
+                            Уникальные подборки работ с авторскими рецензиями
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                    <table align="left" style="margin-right: 46px;" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td align="left" width="140" class="mobil-block">
+                          <img
+                            src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/calendar.png"
+                            width="36" height="36" alt="calendar">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="left" width="140" class="mobil-block">
+                          <p class="about" style="font-family: Arial, Helvetica, sans-serif;margin-top: 16px;margin-bottom: 0;
+                                font-size: 12px;
+                                line-height: 18px; 
+                                color: #515151;">
+                            Возможность настроить нашу рассылку под свой личный вкус
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                    <table align="left" style="margin-right: 0;" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td align="left" width="140" class="mobil-block">
+                          <img
+                            src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/arrow-up-circle.png"
+                            width="36" height="36" alt="arrow-up-circle">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="left" width="140" class="mobil-block">
+                          <p class="about" style="font-family: Arial, Helvetica, sans-serif;margin-top: 16px;margin-bottom: 0;
+                                font-size: 12px;
+                                line-height: 18px; 
+                                color: #515151;">
+                            У вас есть пожелания и предложения?
+                            Напишите нам в ответ на это письмо!
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="center">
+                    <table align="center" style="margin-top: 55px;margin-bottom: 52px;" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td align="center">
+                          <a href="#" bgcolor="#9D5CD0" class="btn" style="font-family: Arial, Helvetica, sans-serif;padding-top: 22.5px;padding-bottom: 22.5px;padding-right: 0;padding-left: 0;border-top-left-radius:48px;border-top-right-radius: 48px;border-bottom-right-radius: 48px;border-bottom-left-radius :48px;
+                                  display: block;
+                                  width: 240px;
+                                  text-decoration: none;
+                                  font-size: 14px; 
+                                  line-height: 0; 
+                                  color: #ffffff; 
+                                  background-color: #9D5CD0;
+                                  -webkit-text-size-adjust:none;">
+                            Узнать все подробности
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- contact section -->
+    <!-- <tr>
+      <td align="center">
+        <table align="center" class="table-600" width="600" cellpadding="0" cellspacing="0" bgcolor="#000000">
+          <tr>
+            <td align="center">
+              <table align="center" class="table-520" width="520" style="margin-top: 28px;margin-bottom: 13px;"
+                cellpadding="0" cellspacing="0" bgcolor="#515151">
+
+                <tr>
+                  <td style="display: block;" align="center">
+                    <table align="center" width="150" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr>
+                        <td align="left">
+                          <a href="#">
+                            <img
+                              src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/vk.png"
+                              width="35" height="35" alt="vk">
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center">
+                          <a href="#">
+                            <img
+                              src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/instagram.png"
+                              width="35" height="35" alt="instagram">
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="right">
+                          <a href="#">
+                            <img
+                              src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/fb.png"
+                              width="35" height="35" alt="fb">
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+              </table>
+
+          <tr>
+            <td align="center">
+              <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 16px;
+                      font-size: 12px;
+                      line-height: 24px; 
+                      color: #757575;">
+                Blanchard &copy; 2020 / Все права защищены
+              </p>
+            </td>
+          </tr>
+
+      </td>
+    </tr>
+  </table>
+  </td>
+  </tr> -->
+
+    <tr>
+      <td align="center">
+        <table align="center" class="table-600" cellpadding="0" cellspacing="0" width="600" bgcolor="#000000">
+          <tr>
+            <td align="center" style="padding-top: 27.5px;padding-bottom: 16px;">
+              <table align="center" width="250" cellpadding="0" cellspacing="0" bgcolor="#595750">
+                <tr>
+                  <td align="center" style="padding-bottom: 12.5px;">
+                    <table align="center" width="150" cellpadding="0" cellspacing="0" bgcolor="#c4c2bb">
+                      <tr>
+                        <td align="left">
+                          <a href="#">
+                            <img
+                              src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/vk.png"
+                              width="35" height="35" alt="vk">
+                          </a>
+                        </td>
+                        <td align="center">
+                          <a href="#">
+                            <img
+                              src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/instagram.png"
+                              width="35" height="35" alt="instagram">
+                          </a>
+                        </td>
+                        <td align="right">
+                          <a href="#">
+                            <img
+                              src="https://raw.githubusercontent.com/sepqs88z/HTML-Email/HTML-Email/html-email/img/fb.png"
+                              width="35" height="35" alt="fb">
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="center">
+                    <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 0;
+                      font-size: 12px;
+                      line-height: 24px; 
+                      color: #757575;">
+                      Blanchard &copy; 2020 / Все права защищены
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center">
+        <table align="center" class="table-600" width="600" cellpadding="0" cellspacing="0" bgcolor="#EBEBEB">
+          <tr>
+            <td align="center" style="padding-top: 5px;padding-bottom: 7px;">
+              <table align="center" class="table-520" width="520" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="center">
+                    <p style="font-family: Arial, Helvetica, sans-serif;margin-top: 0;margin-bottom: 0;
+                      font-size: 10px;
+                      line-height: 24px; 
+                      color: #757575;">
+                      Вы можете так же <a href="#" style="color:#9D5CD0;">отписаться от рассылки</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
       </td>
     </tr>
 
